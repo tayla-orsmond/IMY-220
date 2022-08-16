@@ -1,0 +1,15 @@
+/* Tayla Orsmond u21467456 */
+:root{
+    --ping: lightpink;
+    --blu: lightblue;
+}
+div[class^="col"]{
+    border: 3px solid var(--blu);
+    border-radius: 20px;
+}
+div[class^="col"]:nth-child(even){
+    border: 3px solid var(--ping);
+}
+div[id="row"]{
+    margin: 5px;
+}

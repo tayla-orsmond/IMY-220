@@ -1,0 +1,17 @@
+/* Tayla Orsmond u21467456 */
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@200&display=swap');
+.card-header {
+    font-family: 'Open Sans', sans-serif;
+}
+.card-body{
+    font-family: 'Poppins', sans-serif;
+}
+@media (min-width: 992px){
+    i{
+        transition: all 0.5s;
+    }
+    button:hover i{
+        transform: translateX(5px) rotate(90deg);
+    }
+}

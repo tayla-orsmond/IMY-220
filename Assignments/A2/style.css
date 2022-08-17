@@ -13,7 +13,7 @@ div.card-header{
 div.row.eventsGallery img{
 	background-size: cover;
 	background-position: center center;
-	 height: 200px; 
+	height: 200px !important; 
 	/* width: 200px;  */
 }
 

@@ -1,4 +1,3 @@
-//Tayla Orsmond u21467456
 // year/month/day
 var events = [
 	{name: "University expo", description: "Expo to showcase University degrees", dateStart: "2022/02/01", dateEnd: "2022/02/14"},
@@ -9,4 +8,3 @@ var events = [
     {name: "Park Picnic", description: "Picnic event in the park", dateStart: "2022/06/12", dateEnd: "2022/06/12"}
 ];
 
-//EventHandler class

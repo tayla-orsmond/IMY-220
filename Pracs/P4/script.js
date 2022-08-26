@@ -61,7 +61,7 @@ const checkUniqueLetters = input => {
 		}
 	},[]);
 	return `The word ${input} has ${unique.length} unique letters`;
-}
+}//end checkUniqueLetters
 
 const checker = new FactorialChecker();
 

@@ -34,39 +34,38 @@ class FactorialChecker {
 
 }//end FactorialChecer
 
-
-const PigLatinEncrypt = str =>{
-	var vowels = "aeiou";
-	vowels = vowels.split("");
-	var newStr = [];
-	str = str.toLowerCase();
-
-    if (vowels.indexOf(str[0]) > -1) {
-        newStr = str + "way";
-        return newStr;
-    } else {
-        var firstMatch = str.match(/[aeiou]/g) || 0;
-        var vowel = str.indexOf(firstMatch[0]);
-        newStr = str.substring(vowel) + str.substring(0, vowel) + "ay";
-        return newStr;
+const vowels = /(A|a|E|e|I|i|O|o|U|u)/;
+const PigLatinEncrypt = input => {
+	const original = input;
+    if(input.search(vowels) === -1){
+        input += "ay";
     }
-
+    else if(input.search(vowels) === 0){
+        input += "way";
+    }
+    else{
+        var FL = input.substring(0, 1);
+        input = input.slice(1);
+        input += FL + "ay";
+    }
+    return `The result when converting ${original} to Pig Latin is: ${input}`;
 }//end PigLatinEncrypt
+
 
 
 const checker = new FactorialChecker();
 
-document.getElementById("GenerateFactorial").onclick = function()
+document.getElementById("GenerateFactorial").onclick = () =>
 {
 	document.getElementById("FactorialResult").innerHTML = checker.printFactorial(document.getElementById("FactorialValue").value);
 }
 
-document.getElementById("GenerateFactorialList").onclick = function()
+document.getElementById("GenerateFactorialList").onclick = () =>
 {
 	document.getElementById("FactorialListResult").innerHTML = checker.fillArray(document.getElementById("FactorialInput").value);
 }
 
-document.getElementById("PigLatinEncrypt").onclick = function()
+document.getElementById("PigLatinEncrypt").onclick = () =>
 {
 	document.getElementById("PigLatinResult").innerHTML = PigLatinEncrypt(document.getElementById("SentenceToConvert").value);
 }

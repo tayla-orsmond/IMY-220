@@ -51,7 +51,17 @@ const PigLatinEncrypt = input => {
     return `The result when converting ${original} to Pig Latin is: ${input}`;
 }//end PigLatinEncrypt
 
-
+const checkUniqueLetters = input => {
+	const arr = [...input];
+	let unique = arr.reduce((acc, curr) => {
+		if(acc.includes(curr)) {
+			return acc;
+		} else {
+			return acc + curr;
+		}
+	},[]);
+	return `The word ${input} has ${unique.length} unique letters`;
+}
 
 const checker = new FactorialChecker();
 
@@ -68,4 +78,8 @@ document.getElementById("GenerateFactorialList").onclick = () =>
 document.getElementById("PigLatinEncrypt").onclick = () =>
 {
 	document.getElementById("PigLatinResult").innerHTML = PigLatinEncrypt(document.getElementById("SentenceToConvert").value);
+}
+document.getElementById("checkRecurringChars").onclick = () =>
+{
+	document.getElementById("recurringCharsResult").innerHTML = checkUniqueLetters(document.getElementById("charChecker").value);
 }

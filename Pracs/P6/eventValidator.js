@@ -14,7 +14,6 @@ module.exports.checkDate = (date) => {
     var givenDate = new Date(date);
     //if the date given is within the range (same month, between days, year is irrelevant), return true
     //otherwise return false
-    console.log(givenDate.getMonth() + " " + givenDate.getDate() + " " + givenDate.getFullYear() + " ||| " + startDate.getMonth() + " " + startDate.getDate() + " " + startDate.getFullYear() + " " + endDate.getMonth() + " " + endDate.getDate() + " " + endDate.getFullYear());
     return (givenDate.getMonth() === startDate.getMonth()) && (givenDate.getDate() > startDate.getDate()) && (givenDate.getDate() <= endDate.getDate());
 }
 

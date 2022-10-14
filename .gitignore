@@ -7,3 +7,4 @@ Tuts/
 *.zip
 *.pdf
 *.jpg
+node_modules/

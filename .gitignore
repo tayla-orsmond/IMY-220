@@ -8,3 +8,5 @@ Tuts/
 *.pdf
 *.jpg
 node_modules/
+*.txt
+*.ini
